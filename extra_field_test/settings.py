@@ -6,6 +6,17 @@ from django import VERSION as DJANGO_VERSION
 from django.utils.translation import ugettext_lazy as _
 
 
+MIGRATION_MODULES = {'pages': 'pages_migrations'}
+
+EXTRA_MODEL_FIELDS = (
+    (
+        "mezzanine.pages.models.Page.extra_field",
+        "django.db.models.fields.BooleanField",
+        (),
+        {"default": False},
+    ),
+)
+
 ######################
 # MEZZANINE SETTINGS #
 ######################
